@@ -83,7 +83,7 @@ dependencies {
     implementation("thedarkcolour:kotlinforforge:$forge_kotlin_version")
 
     // Create compats
-    modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    modImplementation("maven.modrinth:create:${minecraft_version}-${create_version}") { transitive = false }
     modImplementation("com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
     modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
 
