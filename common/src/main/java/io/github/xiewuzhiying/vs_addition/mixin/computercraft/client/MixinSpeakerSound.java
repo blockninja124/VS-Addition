@@ -46,19 +46,6 @@ public abstract class MixinSpeakerSound extends AbstractSoundInstance implements
         }
     }
 
-    @Inject(
-            method = "tick",
-            at = @At("HEAD")
-    )
-    private void updateWorldPos(CallbackInfo ci) {
-        if (this.ship != null) {
-            Vec3 worldPos = VSGameUtilsKt.toWorldCoordinates(speakerPosition.level(), speakerPosition.position());
-            x = worldPos.x;
-            y = worldPos.y;
-            z = worldPos.z;
-        }
-    }
-
     @NotNull
     @Override
     public Vector3dc getVelocity() {
